@@ -1,0 +1,12 @@
+/*///////////////
+  #_CHECKBOX
+///////////////*/
+
+.c-expanded-nav {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+
+  background-image: radial-gradient($color-primary-light, $color-primary-dark);
+  transition: transform 0.2s cubic-bezier(0.86, 0, 0.07, 1);
+}

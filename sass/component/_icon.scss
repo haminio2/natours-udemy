@@ -1,0 +1,39 @@
+//ICON
+
+.c-icon--menu {
+  position: relative;
+  margin-top: 3.5rem;
+
+  @include respond(phone) {
+    margin-top: 3rem;
+  }
+
+  &,
+  &::before,
+  &::after {
+    display: inline-block;
+    width: 3rem;
+    height: 2px;
+    background-color: $color-grey-dark-3;
+
+    @include respond(phone){
+      height: 1px;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  &::before {
+    top: -0.8rem;
+  }
+
+  &::after {
+    top: 0.8rem;
+  }
+}

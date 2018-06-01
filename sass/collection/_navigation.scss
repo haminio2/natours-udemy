@@ -1,0 +1,117 @@
+/*///////////////
+   #NAVIGATION
+///////////////*/
+
+.c-navigation {
+  &__btn {
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    z-index: 200;
+
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond (phone) {
+      top: 2.5rem;
+      right: 2.5rem;
+      height: 6rem;
+      width: 6rem;
+    }
+  }
+
+  &__bkgnd {
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 100;
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &__inner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 150;
+
+    height: 100vh;
+    width: 0;
+  }
+
+
+
+  &__item {
+    margin: 1rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      padding: 1rem 2rem;
+
+      font-size: 3rem;
+      font-weight: 300;
+
+
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-white;
+      background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+      background-size: 300%;
+      transition: all 0.4s;
+
+      @include respond(phone) {
+        font-size: 2.5rem;
+        transition: all 0.1s;
+      }
+
+      span {
+        display: inline-block;
+        margin-right: 1.5rem;
+      }
+    }
+
+    &:active,
+    &:hover {
+      background-position: 100%;
+      color: $color-primary;
+      transform: translateX(1rem);
+    }
+  }
+
+  &__btn:hover &__icon::before {
+    top: -1rem;
+  }
+
+  &__btn:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__btn &__icon {
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__btn &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__btn &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+}

@@ -1,0 +1,73 @@
+/*///////////////
+    #GLOBAL
+///////////////*/
+
+
+//===============
+//  #STRUCTURE
+//===============
+
+//...............
+// ##BOX-SIZING
+//...............
+*, *::after, *::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+//...............
+// ##NO-SCROLL-MAIN-AXIS
+//...............
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+//...............
+//   ##ONE-REM
+//...............
+html {
+  font-size: 62.5%;    //This defines what 1rem should be. 1rem = 10px; 10px/16px = 62.5%
+  @include respond(tab-land) {
+    font-size: 56.25%;    //1rem = 9px, 9/16 = 56.25%
+  }
+  @include respond(tab-port) {
+    font-size: 50%;    //1rem = 8px, 8/16 = 50%
+  }
+  @include respond(lg-desktop) {
+    font-size: 75%;    //1rem = 12px, 12/16 = 75%
+  }
+}
+
+
+body {
+//...............
+//   ##SPACING
+//...............
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+//...............
+// ##FONT-&-BKGND
+//...............
+  background-color: $color-white;
+
+  color: $color-grey-dark;
+  font-family: "Lato", Sans-Serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+//===============
+//  #COSMETICS
+//===============
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
