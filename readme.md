@@ -1,89 +1,156 @@
-# ABOUT
-This is one of my first projects with HTML and CSS. I am learning a lot of material, but some things are still hazy. I want to go back and refactor my code. The instructor, Jonas implements BEM, the CSS naming convention and the 7-1 method for organizing his files.
+# Introduction
+This is the *Natours* project from the **Advanced CSS Udemy Course**. I am mainly focused on organizing my code and refactoring my code so that it's maintainable in the future. Although the instructor, Jonas does a great job of introducing the concepts and does introduce organizational concepts such as BEM and the 7-1 file management system, I want to organize the code a little bit more.
 
-I want to use BEMIT and ITCSS if all possible. There is a lot of overlap between BEMIT and BEM and ITCSS and the 7-1 method. But I just think I prefer the former over the latter.
+Here I will detail the various organizational aspects that I hope to apply in my future projects. Most of it not all are ideas that I read about online and borrowed heavily from BEM, BEMIT, Atomic Design, OOCSS, and more. I take no credit for coming up with these ideas. However, I have renamed and combined a few concepts in a way that makes sense for me.
 
-I also want to develop a system for ordering my CSS properties, sectioning the different parts of my CSS, and proper spacing of my CSS/SCSS. I am stealing a lot, if not all of my organizational method from other people. I am relying a lot on Harry Roberts' style guide because he put a lot of time thinking about the matter.
+# Goals
++ Learn about CSS (float layout)
++ Become confident with using media queries
++ Use and become comfortable with Git/Github
++ Get accustomed to the basic Agile Method
++ Create a general organizational template/guide for future projects
 
-# Table of Contents  
-[Headers](##headers)  
-[Emphasis](##emphasis)  
+# CSS Style Guide
 
-This will be how I will organize the Table of Content. There will be 1 for the HTML and 1 for the CSS. I will use the "|" symbol and repeat it 75times. I will list the sections with their respective # and in lowercase. Indent "Table of Content" 15x.
+## File Management System
+I have created a 7 folder structure for my SCSS code. It's in alphabetical order. I have decided to singularize all of these folder names.
 
-<!-- ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-                                  #TABLE OF CONTENT
+The folder system is largely based on the ITCSS folder system mixed with the 7-1 folder system in the SCSS guidelines.
 
-                                  I.#navigation
-                                    A.
-                                  II.#header
-                                    A.
-                                  III.#section-about
-                                    A.
-                                  IV.#section-features
-                                  V.#section-tours
-                                  VI.#popup
-|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
++ ABSTRACT
+  - Name taken from the [7-1 Pattern](https://sass-guidelin.es/)
+  - A combination of the _Settings_ & _Tools_ section outlined in [ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)  
++ BASE
+  - Reset, 3rd party default styling, bare html elements
++ BOX
+  - The so called "Object" proposed by Nicole Sullivan in _OOCSS_ & also featured in _ITCSS_
+  - The structural, skeletal, non-cosmetic template and container where HTML items can live
++ COLLECTION
+  - Large components or a grouping of smaller components (atoms, molecules, cells)
+  - Components at the Organism or Pages level
++ COMPONENT
+  - Smaller components (atoms, molecules, cells)
++ UTILITY
+  - Utility or helper classes helping in (alignment, spacing, color, etc). Overriding class. Usually does 1 thing and does it well)
++ VARIATION
+  - States, Themes, and Animations
 
-# File Organization
-7-1 method mixed with the ITCSS.
+## Sectioning
+Use symbols '//', '==', '..' to create headings in your files. Use 15 symbols when creating regular headings *(Headings 1-6)* and use 30 '//' when creating the Table of Content. The Table of Content should exist in the HTML file after the '<head>'. It will also exist in the _main.scss_ file.
 
-7-1 file organization is:
-base/
-components/
-layout/
-pages/
-themes/
-abstracts/
-vendors/
+The '#' of the headings are based off of the Markdown syntax.
 
-ITCSS's file organization is:
-    Settings – used with preprocessors and contain font, colors definitions, etc.
+### HTML SECTIONING
+    <!--///////////////
+            #TITLE
+    ///////////////-->
 
-    Tools – globally used mixins and functions. It’s important not to output any CSS in the first 2 layers.
+    <!--//////////////////////////////
+              #TABLE-OF-CONTENT
 
-    Generic – reset and/or normalize styles, box-sizing definition, etc. This is the first layer which generates actual CSS.
+              1. #Header
+              2. #Header
+     //////////////////////////////-->
 
-    Elements – styling for bare HTML elements (like H1, A, etc.). These come with default styling from the browser so we
-    can redefine them here.
+    <!--===============
+          #HEADER-1
+    ================-->
 
-    Objects – class-based selectors which define undecorated design patterns, for example media object known from OOCSS
+    <!--...............
+          ##HEADER-2
+    ................-->
 
-    Components – specific UI components. This is where majority of our work takes place and our UI components are often composed of Objects and Components
+    <!-- ###HEADER-3
+    ================-->
 
-    Utilities – utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class
+    <!-- ####HEADER-4
+    ................-->
+
+    <!--=== #####HEADER-5 ===-->
+
+    <!--... ######HEADER-6 ...-->
+
+### CSS SECTIONING
+
+    /&ast;///////////////
+          #TITLE
+    ///////////////&ast;/
+
+    /&ast;///////////////////////////////////
+                  #TABLE-OF-CONTENT
+
+                  1. #Header-1
+                  2. #Header-2
+     ///////////////////////////////////&ast;/
+
+    /&ast;===============
+      #HEADER-1
+    ===============&ast;/
+
+    /&ast;...............
+      ##HEADER-2
+    ...............&ast;/
+
+    /&ast;  ###HEADER-3
+    ================&ast;/
+
+    /&ast;  ####HEADER-4
+    ................&ast;/
 
 
-SIMILARITIES BETWEEN THE 2:
-base/   ----- Elements/Generic
-components/   ------ Components
-layout/    ------ Objects
-pages/
-themes/
-abstracts/  -----Settings
-            -----Tools
-vendors/   ------Generic
+    /&ast;=== #####HEADER-5 ===&ast;/
 
 
-MY FILE SYSTEM
-I. Abstracts (Combination of Settings + Tools)
-II. Generic (Vendors, 3rd party)
-III. Base (Resets, box-sizing, typography, animations, base Styling)
-IV. Object (This is basically the "layout" that the 7-1 method describes describes. This is the non-cosmetic layer. I can also call it the "Structure" folder)
-V.Components (Specific UI Implementation, use the Atomic design principle here to further organize your components into atom, molecules, organisms, template, and pages. Most likely, you will only use the first three categories in this section). The "template" section can be thought of as the Object category. Meanwhile, the "pages" section can be thought of as the "Object" + "Components"
-VI. Utilities
-VII.Alteration (States, Themes)
-VIII. main.scss (Place to import all of you partial scss files)
+    /&ast;... ######HEADER-6 ...&ast;/
 
-Simplified File System
-I. Abstracts
-II. Base
-III. Objects
-IV. components
-V. Utilities
-VI. main.scss (Import file)
 
-#Html Attribute Order
+### SCSS SECTIONING
+
+    /////////////////
+    //    #TITLE
+    /////////////////
+
+
+    ////////////////////////////////
+    //      #TABLE-OF-CONTENT
+    //
+    //        1. #Header-1
+    //        2. #Header-2
+    ////////////////////////////////
+
+    //===============
+    //    #HEADER-1
+    //===============
+
+    //...............
+    //    ##HEADER-2
+    //...............
+
+    // ###HEADER-3
+    //================
+
+    // ####HEADER-4
+    //................
+
+    //=== #####HEADER-5 ===//
+
+    //... ######HEADER-6 ...//
+
+
+## CSS Property Order
+
+1. Layout
+  - position(clear, display, float, TRouBLe, z-index)
+2. Box-Positioning
+  - (border, margin, padding, height, width)
+3. Visual
+  - (background, box-shadow, color)
+4. Font & Text
+  - (font-size, font-family, line-height, text-align, text-transform, etc )
+5. Miscellaneous
+  - (cursor, overflow, )
+
+## Html Attribute Order
 
 HTML attributes should come in this particular order for easier reading of code. Also double space between classes.
 
@@ -95,63 +162,3 @@ HTML attributes should come in this particular order for easier reading of code.
     role, aria-*
 
 Classes make for great reusable components, so they come first. Ids are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.
-
-#White Space
-    One (1) empty line between closely related rulesets.
-    Two (2) empty lines between loosely related rulesets.
-    Three (3) empty lines between entirely new sections.
-
-#CSS Property Order
-Declaration order
-
-Related property declarations should be grouped together following the order:
-
-    Positioning (Position, TRouBLe top/right/bottom/left, z-index)
-    Box model (Display, float, width/ height, padding, margin)
-    Typographic (Text-align, font, line-height, color)
-    Visual (background, border, )
-    Misc (Clip-Path, Opacity, Animations, etc)
-
-Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.
-
-Everything else takes place inside the component or without impacting the previous two sections, and thus they come last.
-
-# Sectioning
-I will use the md version to title & section off my material in my code. # = Title/Header 1, ## = Header 2, ### = Header 3, so on and so forth.
-
-My title will be styled like this. I will use Harry Robert's system. A space between the asterisks and 20 forward slashes. The title will be centered in the middle. Below is an example of what I am thinking about doing. Notice that all of the letters are capitalized.
-
-HTML sectioning
-
-<--////////////////////
-          #TITLE
-////////////////////-->
-
-  <--////////////////////
-  // ## Header 2 -->
-
-
-
-SCSS Sectioning
-// //////////////////// //
-//         #TITLE       //       
-// //////////////////// //                    
-
-
-    ///////////////////////
-    // ## Header 2
-
-      ///////////////////////
-      // ### Header 3
-
-        ///////////////////////
-        // #### Header 4
-
-
-CSS Sectioning
-/* //////////////////// *\
-          #CARDS
-\* //////////////////// */
-
-  /*//////////////////// 
-  // ## HEADER 2 */
