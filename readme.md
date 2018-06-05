@@ -21,24 +21,24 @@ The folder system is largely based on the ITCSS folder system mixed with the 7-1
   - Name taken from the [7-1 Pattern](https://sass-guidelin.es/)
   - A combination of the _Settings_ & _Tools_ section outlined in [ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)  
 + BASE
-  - Reset, 3rd party default styling, bare html elements
+  `Reset, 3rd party default styling, bare html elements`
 + BOX
-  - The so called "Object" proposed by Nicole Sullivan in _OOCSS_ & also featured in _ITCSS_
-  - The structural, skeletal, non-cosmetic template and container where HTML items can live
+  `The so called "Object" proposed by Nicole Sullivan in _OOCSS_ & also featured in _ITCSS_`
+  `The structural, skeletal, non-cosmetic template and container where HTML items can live`
 + COLLECTION
-  - Large components or a grouping of smaller components (atoms, molecules, cells)
-  - Components at the Organism or Pages level
+  `Large components or a grouping of smaller components (atoms, molecules, cells)`
+  `Components at the Organism or Pages level`
 + COMPONENT
-  - Smaller components (atoms, molecules, cells)
+  `Smaller components (atoms, molecules, cells)`
 + UTILITY
-  - Utility or helper classes helping in (alignment, spacing, color, etc). Overriding class. Usually does 1 thing and does it well)
+  `Utility or helper classes helping in (alignment, spacing, color, etc). Overriding class. Usually does 1 thing and does it well)`
 + VARIATION
-  - States, Themes, and Animations
+  `States, Themes, and Animations`
 
 ## Sectioning
-Use symbols '//', '==', '..' to create headings in your files. Use 15 symbols when creating regular headings *(Headings 1-6)* and use 30 '//' when creating the Table of Content. The Table of Content should exist in the HTML file after the '<head>'. It will also exist in the _main.scss_ file.
+Use symbols `//`, `==`, `..` to create headings in your files. Use 15 symbols when creating regular headings *(Headings 1-6)* and use 30 `//` when creating the Table of Content. The Table of Content should exist in the HTML file after the `<head>`. It will also exist in the _main.scss_ file.
 
-The '#' of the headings are based off of the Markdown syntax.
+The `#` of the headings are based off of the Markdown syntax.
 
 ### HTML SECTIONING
     <!--///////////////
@@ -140,15 +140,15 @@ The '#' of the headings are based off of the Markdown syntax.
 ## CSS Property Order
 
 1. Layout
-  - position(clear, display, float, TRouBLe, z-index)
+   `position(clear, display, float, TRouBLe, z-index)`
 2. Box-Positioning
-  - (border, margin, padding, height, width)
+  `(border, margin, padding, height, width)`
 3. Visual
-  - (background, box-shadow, color)
+  `(background, box-shadow, color)`
 4. Font & Text
-  - (font-size, font-family, line-height, text-align, text-transform, etc )
+  `(font-size, font-family, line-height, text-align, text-transform, etc`
 5. Miscellaneous
-  - (cursor, overflow, )
+  `(cursor, overflow, etc)`
 
 ## Html Attribute Order
 
