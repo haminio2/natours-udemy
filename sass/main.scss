@@ -17,14 +17,14 @@
 @import "base/global";
 
 //===============
-//   #BUBBLE
+//   #Box
 //===============
-// (Harry Robert's "Object." Renamed to have folders in alphabetical order. Reusable templates & containers, -o prefix)
+// (Harry Robert's "Object." Renamed to have folders in alphabetical order. Reusable templates & containers, -b prefix)
 
 //===============
 //  #COLLECTION
 //===============
-// (organisms (ie: header, section, footer) & pages. Collection of page sections & page styling. You can also think of this as the compound. I wanted to use that word, but my alphabetical ordering would have been off so I chose "collection" instead -c prefix)
+// (organisms (ie: header, section, footer) & pages. Collection of page sections & page styling. You can also think of this as the compound. I wanted to use that word, but my alphabetical ordering would have been off so I chose "collection" instead -o prefix)
 @import "collection/header";
 @import "collection/wireframe";
 @import "collection/footer";
@@ -35,9 +35,9 @@
 @import "collection/popup";
 
 //===============
-//  #COMPONENTS
+//  #COMPONENT
 //===============
-// (ui specific modules, atoms, molecules, & cells..cells is a category that I added on my own. Only use if absolutely necesssary. Otherwise, just don't think about it. It creates more complexity -c prefix)
+// (ui specific modules, atoms, molecules, & cells..cells is a category that I added on my own. Only use if absolutely necesssary. Otherwise, just don't think about it. It creates more complexity -a, -m prefix)
 @import "component/button";
 @import "component/composition";
 @import "component/feature-box";

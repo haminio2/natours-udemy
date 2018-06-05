@@ -2,6 +2,9 @@
     #MIXINS
 ///////////////*/
 
+//===============
+//   POSITIONING
+//===============
 @mixin clearfix {
   &::after {
     content: "";
@@ -18,7 +21,9 @@
 }
 
 
-//  MQ Manager
+//===============
+//   MQ MANAGER
+//===============
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {@content};   //600px
