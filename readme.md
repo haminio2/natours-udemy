@@ -176,6 +176,6 @@ Components will be divided up by the categorization in Atomic Design. Use the *c
 
 ## *Naming*
 - Use prefixes 
-    * `-b (for box)`, `-a (for atom)`, `-m(molecules)`, `-o(organisms)`, `-t(themes)`, `-u(utilities)`, `-js(javascript hooks)`, `-_(hooks)` `-is/has(states)`
+    * `-b (for box)`, `-a (for atom)`, `-m(molecules)`, `-o(organisms)`, `-t(themes)`, `-u(utilities)`, `-js(javascript hooks)`, `-_(hacks)` `-is/has(states)`
 - ABEM + responsive suffixes if you need it 
 - Camelcase to separate words and not hypens
