@@ -18,12 +18,12 @@ I have created a 7 folder structure for my SCSS code. It's in alphabetical order
 The folder system is largely based on the ITCSS folder system mixed with the 7-1 folder system in the SCSS guidelines.
 
 + ABSTRACT
-  - Name taken from the [7-1 Pattern](https://sass-guidelin.es/)
-  - A combination of the _Settings_ & _Tools_ section outlined in [ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)  
+  `Name taken from the [7-1 Pattern](https://sass-guidelin.es/)`
+  `A combination of the _Settings_ & _Tools_ section outlined in [ITCSS](https://www.creativebloq.com/web-design/manage-large-css-projects-itcss-101517528)`  
 + BASE
   `Reset, 3rd party default styling, bare html elements`
 + BOX
-  `The so called "Object" proposed by Nicole Sullivan in _OOCSS_ & also featured in _ITCSS_`
+  `The so called "Object" proposed by Nicole Sullivan in OOCSS & also featured in ITCSS`
   `The structural, skeletal, non-cosmetic template and container where HTML items can live`
 + COLLECTION
   `Large components or a grouping of smaller components (atoms, molecules, cells)`
@@ -72,36 +72,36 @@ The `#` of the headings are based off of the Markdown syntax.
 
 ### CSS SECTIONING
 
-    /&ast;///////////////
+    /*///////////////
           #TITLE
-    ///////////////&ast;/
+    ///////////////*/
 
-    /&ast;///////////////////////////////////
+    /*///////////////////////////////////
                   #TABLE-OF-CONTENT
 
                   1. #Header-1
                   2. #Header-2
-     ///////////////////////////////////&ast;/
+     ///////////////////////////////////*/
 
-    /&ast;===============
+    /*===============
       #HEADER-1
-    ===============&ast;/
+    ===============*/
 
-    /&ast;...............
+    /*...............
       ##HEADER-2
-    ...............&ast;/
+    ...............*/
 
-    /&ast;  ###HEADER-3
-    ================&ast;/
+    /* ###HEADER-3
+    ================*/
 
-    /&ast;  ####HEADER-4
-    ................&ast;/
-
-
-    /&ast;=== #####HEADER-5 ===&ast;/
+    /* ####HEADER-4
+    ................*/
 
 
-    /&ast;... ######HEADER-6 ...&ast;/
+    /*=== #####HEADER-5 ===*/
+
+
+    /*... ######HEADER-6 ...*/
 
 
 ### SCSS SECTIONING
