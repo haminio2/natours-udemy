@@ -176,7 +176,8 @@ Components will be divided up by the categorization in Atomic Design. Use the *c
     - `<button>`, `<input>`, `<img>`, `<checkbox>`, `glyphicons`, `tabs`, `headings`, `dividers`, `pills`, `logos`, `links`, `labels`, `thumbnails`, `progress bars`, `alerts`, `panel`, `embedded vids`
     
 + Quarks
-  - Anything smaller than an atom that seems to go inside atoms
+  - Anything smaller than an atom that seems to go inside atoms. 
+  - `spans`, `text`
 
 ## *Naming*
 - Use prefixes 
