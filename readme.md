@@ -30,10 +30,11 @@ The folder system is largely based on the ITCSS folder system mixed with the 7-1
   - `Components at the Organism or Pages level`
 + COMPONENT
   - `Smaller components (atoms, molecules, cells)`
++ TRANSFORMATION 
+  - `States, Themes, and Animations`
 + UTILITY
   - `Utility or helper classes helping in (alignment, spacing, color, etc). Overriding class. Usually does 1 thing and does it well)`
-+ VARIATION
-  - `States, Themes, and Animations`
+
 
 ## *Sectioning*
 Use symbols `//`, `==`, `..` to create headings in your files. Use 15 symbols when creating regular headings *(Headings 1-6)* and use 30 `//` when creating the Table of Content. The Table of Content should exist in the HTML file after the `<head>`. It will also exist in the _main.scss_ file.
@@ -173,9 +174,12 @@ Components will be divided up by the categorization in Atomic Design. Use the *c
 
 + Atoms 
     - `<button>`, `<input>`, `<img>`, `<checkbox>`, `glyphicons`, `tabs`, `headings`, `dividers`, `pills`, `logos`, `links`, `labels`, `thumbnails`, `progress bars`, `alerts`, `panel`, `embedded vids`
+    
++ Quarks
+  - Anything smaller than an atom that seems to go inside atoms
 
 ## *Naming*
 - Use prefixes 
-    * `-b (for box)`, `-a (for atom)`, `-m(molecules)`, `-o(organisms)`, `-t(themes)`, `-u(utilities)`, `-js(javascript hooks)`, `-_(hacks)` `-is/has(states)`
+    * `-b (for box)`, `-0a (for quarks)`, `-a (for atom)`, `-m(molecules)`, `-o(organisms)`, `-p(pages), `-t(themes)`, `-u(utilities)`, `-js(javascript hooks)`, `-_(hacks)`, `-is/has(states)`, `-l(layout)`
 - ABEM + responsive suffixes if you need it 
 - Camelcase to separate words and not hypens
